@@ -1,0 +1,175 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(WORKS.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} 
+html{scroll-behavior: smooth;}
+
+/* 본문 */
+
+#container{
+  width: 100%;
+}
+
+.works_box{
+  width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  padding-bottom: 50px;
+  border-bottom: 5px solid #eee ;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.works_img ul li{
+  width: 1200px;
+}
+
+.works_img ul li h3{
+  position: relative;
+  margin: 50px 70px;
+  font-size: 85px;
+  font-weight: 300;
+  z-index: 10;
+}
+.works_img ul li h3::before{
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #4F200D;
+  top: 83px;
+  left: -110px;
+  z-index: 15;
+
+}
+.works_img ul li h3::after{
+  position: absolute;
+  content: '';
+  width: 2000px;
+  height: 50px;
+  background-color: #FF8400;
+  border-radius: 50px;
+  bottom: 0;
+  left: -130px;
+  z-index: -1;
+}
+.line{position: relative;}
+.line::after{
+  position: absolute;
+  content: '';
+  width: 5px;
+  height: 9010px;
+  background-color: #FFD93D;
+  left: -27px;
+  top: -50px;
+  z-index: 10;
+}
+.works_img ul li img{
+  width: 330px;
+  height: 479px;
+}
+
+/* 이미지 호버 */
+
+.item{
+  position: relative;
+  width: 330px;
+  height: 479px;
+  margin-left: 20px;
+  border-radius: 7px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  overflow: hidden;
+  background-color: #000;
+  transition: 0.5s;
+  display: inline-block;
+}
+
+.txt_box{
+  position: absolute;
+  top: 40%;
+  left: -330px;
+  width: 100%;
+  height: 250px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  color: #fff;
+  transition: 0.5s;
+}
+.txt_box h4{
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.txt_box hr{
+  border: none;
+  width: 100px;
+  height: 1px;
+  background-color: #fff;
+  margin: 10px 0;
+}
+.txt_box p{font-size: 14px;}
+
+.item img{transition: 0.5s;}
+
+.item:hover{
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 38px, rgba(0, 0, 0, 0.12) 15px 15px 12px;
+}
+.item:hover img{
+  filter: blur(1px);
+  transform: scale(1.1);
+  opacity: 0.3;
+}
+.item:hover .txt_box{left: 0px;}
+
+
+/*///////// 스크롤시 나오는버튼*/
+
+#scroll_btn{
+  width:110px;
+  height:auto;
+  position:fixed;
+  z-index:9999;
+  bottom:40%;
+  right:10px;
+	/* background:pink; */
+}
+#scroll_btn ul{
+  width:35px;
+  float:right;
+	/* background:yellow;  */
+} 
+#scroll_btn ul li{
+  width:55px;
+  height:55px;
+  border-radius:100px;
+  background: #222;
+  margin-top:10px;
+  float:right;
+	overflow:hidden;
+	text-align:center;
+  transition: 0.35s;
+  cursor: pointer;
+}
+#scroll_btn ul li a{
+  display: none;
+	color:orange;
+  font-weight: 800;
+	line-height: 55px;
+	font-size: 25px;
+  transition: 0.35s;
+}
+#scroll_btn ul li:hover{
+  width:220px;
+}
+#scroll_btn ul li:hover a{
+  width:200px;
+  display: inline-block;
+
+}

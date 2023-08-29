@@ -1,0 +1,165 @@
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* font-family: xeicon;  */
+
+/*---------- header style ----------*/
+
+html{z-index: 1000;}
+
+/* 탑메뉴 */
+header{
+  width: 100%;
+  height: 100px;
+}
+nav{
+  width: 100%;
+  height: inherit;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+nav h1{ /* logo */
+  width: 30%;
+	padding: 20px 0 0 20px;
+}
+
+.gnb{
+  width: 50%;
+  display: flex;
+	justify-content: space-around;
+}
+.gnb .menu{
+  position: relative;
+  width: 150px;
+  text-align: center;
+}
+.gnb>.menu>a{
+  position: relative;
+  display: block;
+  width: inherit;
+  height: 50px;
+  color: #111;
+  font-weight: 400;
+  box-sizing: border-box;
+  line-height: 50px; 
+  margin-top: 20px;
+  transition: 0.2s;
+}
+
+.gnb>.menu:hover>a{
+  border: 1px solid #000;
+  background-color: #fff;
+}
+.gnb .menu i{transition: 0.2s;}
+.gnb .menu:hover i{transform: rotate(45deg);}
+
+/* Sub Menu*/
+
+.sub_menu {
+	display: none;
+}
+.sub_menu li{
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+}
+.sub_menu li a {
+	color: #111;
+	font-size: 14px;
+}
+.sub_menu li:hover {background:rgb(255, 243, 134);}
+.sub_menu li:hover a{color: #111;}
+
+/* 서브페이지 타이틀 */
+
+.title-main{
+  width: 400px;
+  height: 110px;
+  margin: auto;
+  line-height: 200px;
+}
+
+@keyframes main_ani1{
+  0%{width: 0;}
+  30%{width: 0;}
+  100%{width: 500px;}
+}
+
+.title-main h1{
+  position: relative;
+  font-size: 70px;
+  color: #111;
+  text-align: center;
+  z-index: 100;
+}
+.title-main h1::before{
+  position: absolute;
+  content: '';
+  width: 500px;
+  height: 60px;
+  left: 50%;
+  bottom: 50px;
+  background-color: #fff;
+  z-index: -1;
+  animation: main_ani1 2s cubic-bezier(.37, .02, .21, 1);
+  transform: translateX(-50%);
+}
+
+
+/* NEWS */
+#sub1{
+	background:url(../image/sub1.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:200px;
+	background-size:cover;
+}
+
+
+/* RECRUIT */
+#sub2{
+	background:url(../image/sub2.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:200px;
+	background-size:cover;
+}
+/* WORKS */
+
+#sub3 div{
+  width: 700px;
+  height: 110px;
+  margin: auto;
+  line-height: 200px;
+}
+
+#sub3{
+  position: relative;
+	background:url(../image/sub3.gif) no-repeat center bottom fixed;
+	width:100%;
+	height:200px;
+	background-size:cover;
+}
+#sub3::before{
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+#sub6{
+	background:url(../image/sub6.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:200px;
+	background-size:cover;
+}
+
+#sub7{
+	background:url(../image/sub7.jpg) no-repeat center bottom fixed;
+	width:100%;
+	height:200px;
+	background-size:cover;
+}

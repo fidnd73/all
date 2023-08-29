@@ -1,0 +1,66 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} 
+html{scroll-behavior: smooth;}
+
+/* 본문 */
+
+#container{
+  width: 100%;
+  background: url(../image/bg_pattern.png) no-repeat center bottom fixed;
+  background-color: #eee;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.section_in{
+  width: 1200px;
+  margin: 70px auto 0;
+}
+
+.txt_box{
+  display: flex;
+  margin-bottom: 20px;
+}
+.txt_box h3{
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  background-color: rgb(255, 171, 60);
+  font-size: 23px;
+  text-align: center;
+  line-height: 50px;
+}
+.txt_box_in{
+  display: inline-block;
+  width: 1000px;
+  height: 50px;
+  font-size: 14px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 10px  0 0 20px;
+  line-height: 30px;
+}
+.txt_box_in span{
+  margin-right: 50px;
+}
+
+.box5, .ht1 h3{height: 140px;}
+.ht1 h3{line-height: 140px;}
+.box6, .ht2 h3{height: 330px;}
+.ht2 h3{line-height: 330px;}
+.box6 p{
+  display: inline-block;
+  margin-right: 200px;
+}
+
+.map iframe{
+  width: 1200px;
+  height: 550px;
+  margin: 70px 0;
+}

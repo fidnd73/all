@@ -1,0 +1,78 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} 
+html{scroll-behavior: smooth;}
+
+/* 본문 */
+
+#container{
+  width: 100%;
+  background: url(../image/bg_pattern.png) no-repeat center bottom fixed;
+  background-color: #eee;
+}
+.section_in{
+  width: 1200px;
+  margin: auto;
+}
+
+.section_box{
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #fff;
+  padding-bottom: 50px;
+  border-bottom: 5px solid #eee ;
+}
+.section_box h2{
+  display: inline-block;
+  margin: 50px 30px 10px;
+  font-size: 30px;
+}
+.section_box p{
+  margin: 10px 50px 20px;
+  font-size: 18px;
+  background-color: #ddd;
+  padding: 10px 20px;
+}
+table{
+  width: 800px;
+  margin: auto;
+  border: 1px solid #000;
+  border-top: none;
+  border-spacing: 1px 1px;
+}
+
+.title{
+  height: 50px;
+  font-size: 20px;
+  background-color: #ccc;
+  width: 800px;
+  text-align: center;
+  margin: 10px auto 0;
+  line-height: 50px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.title:hover,
+.title.active{
+  background-color: #ffd45f;
+  border: 1px solid #ffd45f;
+}
+table tr td{
+  padding: 15px;
+  border: 1px dashed #ddd ;
+  border-top: none;
+  border-right: none;
+}
+table tr td a{
+  color: royalblue;
+  text-decoration: underline;
+}
+.desc.active{display: block;}
+.desc{display: none;}

@@ -1,0 +1,120 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} 
+html{scroll-behavior: smooth;}
+
+/* 본문 */
+
+#container{
+  width: 100%;
+  background: url(../image/bg_pattern.png) no-repeat center bottom fixed;
+  background-color: #eee;
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+.section_in{
+  width: 1200px;
+  margin: 70px auto 0;
+}
+
+.contact_txt form{
+  width: inherit;
+  height: 780px;
+  background-color: #fff;
+  padding: 20px 0;
+  margin-bottom: 100px;
+}
+.txt_box{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.txt_box h3{
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 35px;
+  font-weight: 300;
+}
+.txt_box h3::after{
+  position: absolute;
+  content: '';
+  top: 28px;
+  left: 430px;
+  width: 50px;
+  height: 2px;
+  background-color: #222;
+}
+.txt_box h3::before{
+  position: absolute;
+  content: '';
+  top: 28px;
+  right: 430px;
+  width: 50px;
+  height: 2px;
+  background-color: #222;
+}
+
+.contact_txt p{margin-bottom: 20px;}
+
+.contact_form p{
+  display: inline-block;
+  width: 1200px;
+  height: 70px;
+  padding: 10px 50px;
+  box-sizing: border-box;
+}
+
+.contact_form span{
+  display: inline-block;
+  width: 150px;
+}
+
+.contact_form em{
+  font-size: 10px;
+  color: #aaa;
+  margin-left: 20px;
+}
+
+input{
+  width: 300px;
+  height: 30px;
+  border-radius: 0%;
+  margin-left: 20px;
+  outline: none;
+  border: 1px solid #444;
+  padding-left: 10px;
+}
+textarea{
+  position: absolute;
+  width: 900px;
+  height: 300px;
+  border-radius: 0%;
+  margin-left: 20px;
+  padding: 10px;
+  border: 1px solid #444;
+  outline: none;
+}
+.btn{
+  margin: 170px 0 20px;
+  text-align: center;
+  z-index: 1;
+}
+button{
+  width: 250px;
+  height: 60px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: 200;
+  background: #888;
+  border: none;
+  transition: 0.2s;
+}
+
+button:hover{background-color: #222;}

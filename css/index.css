@@ -1,0 +1,433 @@
+@import url(common.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+#wrap{width:100%;}
+header, section, footer{width:inherit;} 
+html{scroll-behavior: smooth;}
+
+/* Top Button */
+
+.top{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9999;
+}
+.top a{
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: url(../image/top.png);
+  transition: 0.35s;
+}
+.top a:hover{background: url(../image/top_on.png);}
+
+/* 메인 */
+
+.main{width: 100vh;}
+
+.header-caption{
+  width: inherit;
+  height: 800px;
+  margin: auto;
+}
+.header-caption h2{
+  position: relative;
+  font-size: 35px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 200;
+  color: #000;
+  text-align: left;
+  margin: 100px 0 0 400px ;
+}
+.header-caption h3{
+  font-size: 75px;
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 700;
+  color: #000;
+  text-align: left;
+  margin: 30px 0 30px 400px ;
+}
+
+@keyframes main_ani1{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.header-caption h2::before{
+  position: absolute;
+  content: '';
+  top: -1000px;
+  left: 850px;
+  width: 1000px;
+  height: 1000px;
+  background-color: rgb(255, 217, 0, 0.2);
+  border-radius: 50%;
+  z-index: -1;
+  animation: main_ani1 3s ease-in;
+}
+.header-caption h2::after{
+  position: absolute;
+  content: '';
+  top: 100px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background-color: rgb(255, 217, 0);
+  border-radius: 50%;
+  z-index: -1;
+  animation-delay: 5s;
+  animation: main_ani1 1.5s ease-in;
+}
+
+/* 메인 슬라이드 */
+
+.slider {
+	width:100%;
+	min-width:740px;
+	height:463px;
+	position:relative;
+	overflow:hidden;
+	background:#fff;
+	text-align:center;
+}
+.slider .bd {
+	width:740px;
+	position:absolute;
+	left:50%;
+	margin-left:-370px
+}
+.slider .bd li {
+	width:740px;
+	overflow:hidden;
+}
+.slider .bd li img {
+	display:block;
+	width:740px;
+	height:463px;
+}
+.slider .tempWrap {
+	overflow:visible !important
+}
+.slider .tempWrap ul {
+	margin-left:-740px !important;
+}
+
+.slider .pnBtn {
+	position:absolute;
+	z-index:1;
+	top:0;
+	width:100%;
+	height:463px;
+	cursor:pointer;
+}
+.slider .prev {
+	left:-50%;
+	margin-left:-370px;
+}
+.slider .next {
+	left:50%;
+	margin-left:370px;
+}
+
+/* 본문__________________________________________ */
+
+/* 대표 애니 설명 */
+
+.ani{
+  width: 100%;
+  background-color: #222;
+}
+
+/*Tab Menu ---------------------------------------*/
+
+#tabmenu{
+  width:800px;
+  height: 1600px;
+  margin: 50px auto 0;
+  padding: 150px 0;
+}
+.tab-header{
+  width:100%;
+  height:70px;
+  position:relative;
+}
+.tab{display: flex;}
+.tab li{
+  width:160px; /*->jQuery에서 탭메뉴 움직이는 거리*/
+  height:70px;
+  box-sizing:border-box;
+  border-left:1px solid #fff;
+  color:#fff;
+  text-align:center;
+  letter-spacing:1px; 
+  /* position:relative; */
+  z-index:100;
+  padding-top: 25px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.tab li:first-child{
+  font-size: 14px;
+  padding-top: 18px;
+}
+.tab li:last-of-type{border-right:1px solid #fff;}
+.tab li.active{
+  color:#222;
+  font-weight: bold;
+} /*1번째 선택된 글자색 */
+.tab-highlight{  /*현재 선택된 탭메뉴->옆으로 이동하는 박스*/
+  background:#fff; 
+  width: 160px;
+  height:70px; 
+  position:absolute;
+  width:160px;
+  top: 0;
+  left:0px;
+}
+
+/*Tab Mneu Contents ---------------------------------------*/
+
+.tab-contents .contents{
+  width:740px;
+  padding:0 20px;
+  display:none;
+}
+.tab-contents .contents.active{display:block;}
+
+.data{
+  display: inline-block;
+  font-size: 17px;
+  color: #222;
+  margin-left: 120px;
+}
+
+.title{
+  font-size: 25px;
+  color: #ccc;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 10px;
+  font-weight: 400;
+}
+h4{
+  font-family: 'Noto Serif JP', serif;
+  font-size: 45px;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  margin: 10px 0 20px;
+}
+
+.txt_box{
+  display: inline-block;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.8);
+  box-sizing: border-box;
+}
+h5{
+  font-family: 'Noto Serif JP', serif;
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  color: #000;
+  margin: 20px 50px 0;
+  padding: 0px 20px;
+  text-align: center;
+  z-index: 10;
+}
+h5::before{
+  position: absolute;
+  content: '';
+  width: 110%;
+  height: 20px;
+  background-color: #fff;
+  left: 30px;
+  bottom: 0;
+  z-index: -1;
+}
+.description {
+  margin: 30px 50px;
+  color: #222;
+  line-height:32px;
+}
+.read-more{
+  color: #fff;
+  font-size:14px;
+  text-transform:uppercase;
+  display:inline-block;
+  padding:3px 16px;
+  margin-top:24px;
+  border:1px solid #fff;
+  float: right;
+  transition: 0.15s;
+}
+.read-more:hover{
+  background-color: #fff;
+  color: #222;
+}
+
+.img_box{
+  position: relative;
+  width: 500px;
+  height: 700px;
+  display: flex;
+  margin: 50px auto 0;  
+}
+.img_box img{
+  position: absolute;
+  width: 500px;
+  height: 700px;
+  margin: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* news */
+
+.news-list{
+  width: 100%;
+  height: 900px;
+  background-color: #fff;
+}
+.news-list-content{
+  position: relative;
+  width: 1200px;
+  height: inherit;
+  margin: auto;
+}
+.news-list-content .news_titie{
+  font-size: 60px;
+  text-align: center;
+  margin-top: 150px;
+}
+.news_titie h6{
+  display: inline-block;
+  border-bottom: 2px solid #222;
+}
+.content-list{
+  width: 900px;
+  height: 600px;
+  margin: 100px auto;
+}
+.content-list li{
+  width: inherit;
+  height: 130px;
+  border-bottom: 1px solid #222;
+  transition: 0.2s;
+}
+.content-list li:hover{
+  background-color: #222;
+  color: #fff;
+}
+.content-list li:hover p{
+  background-color: #fff;
+  color: #222;
+}
+
+.content-list li p{
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  margin: 10px 0 0 10px;
+  transition: 0.35s;
+}
+.content-list li span{
+  text-transform: lowercase;
+  margin-left: 20px;
+}
+.content-list li strong{
+  display: block;
+  font-size: 25px;
+  margin: 20px 70px;
+}
+
+.news-list-content .btn{
+  position: absolute;
+  text-align: right;
+  right: 150px;
+  bottom:110px;
+}
+
+.news-list-content button{
+  width: 70px;
+  height: 30px;
+  border-radius: 0%;
+  background: none;
+  border: 1px solid #000;
+  margin-top: 20px;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+.news-list-content button:hover{
+  border: none;
+  background-color: #222;
+  color: #fff;
+}
+
+/* 스크롤 애니메이션 */
+
+.scr{
+  opacity: 0;
+  transition: all 0.7s ease;
+}
+
+.tab-scroll {
+  transform: translate(-200px, 0);
+}
+
+.news-scroll {
+  transform: translate(-200px, 0);
+}
+
+.scr.show {
+  opacity: 1;
+  transform: none;
+}
+
+/* works */
+
+.works-img{
+  width: 100%;
+  height: 1100px;
+  background-color: #fff;
+  margin-top: 200px;
+}
+.img-box .box{
+  width: 200%;
+  height: inherit;
+  display: flex;
+  margin-bottom: 10px;
+}
+.box a{
+  width: 450px;
+  height: 253px;
+  margin-right: 10px;
+  overflow: hidden;
+}
+.box img{
+  width: 450px;
+  height: 253px;
+  transition: 0.4s;
+}
+
+.box01{transform: translateX(-250px);}
+.box03{transform: translateX(-100px);}
+.box04{transform: translateX(-250px);}
+.box05{transform: translateX(-400px);}
+.img-box img:hover{
+  transform: scale(1.2);
+  opacity: 0.5;
+  z-index: 100;
+}
+
